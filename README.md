@@ -2,7 +2,7 @@
 
 ![Horizon: the time across the sky, a workspace light on the horizon and the glass control center](preview.jpg)
 
-shady-shell living in [Afterglow](../afterglow/README.md)'s sky. There is no
+shady-shell living in [Afterglow](https://github.com/gloaming-dusk/shady-rice-afterglow)'s sky. There is no
 bar:
 
 - the time is written large across the sky, with a line that follows the
@@ -25,10 +25,24 @@ bar:
 Every colour follows the sky's published palette, so the whole shell
 cross-fades with `Super+T`.
 
+## Use it
+
+Horizon needs [Shady](https://github.com/gloaming-dusk/shady),
+[shady-shell](https://github.com/gloaming-dusk/shady-shell) and
+[Afterglow](https://github.com/gloaming-dusk/shady-rice-afterglow), whose
+`config.lua` and `init.lua` it starts from (`shady.base("afterglow")`).
+
+On NixOS, add this flake's package and Afterglow's to `programs.shady.rices`
+and set `programs.shady.rice = "horizon";`. Elsewhere, `./install.sh` here
+and in an Afterglow checkout, then `SHADY_RICE=horizon`.
+
+To try it from a checkout, next to built `shady`, `shady-shell` and
+`shady-rice-afterglow` checkouts (or with `SHADY_ROOT`, `SHADY_SHELL_BIN`
+and `SHADY_AFTERGLOW_DIR` pointing at them):
+
 ```bash
-nix develop -c ./tools/build.sh
-nix develop -c ./rices/horizon/run.sh          # nested in a Wayland session
-nix develop -c ./rices/horizon/run-native.sh   # directly on a VT (DRM + libinput)
+nix develop ../shady -c ./run.sh          # nested in a Wayland session
+nix develop ../shady -c ./run-native.sh   # directly on a VT (DRM + libinput)
 ```
 
 Its `config.lua` and `init.lua` load
@@ -46,7 +60,7 @@ stand-ins for the system tools and a fixed set of applications
 (`capture/`):
 
 ```bash
-nix develop -c bash rices/horizon/capture.sh
+nix develop ../shady -c ./capture.sh
 ```
 
 Typefaces: [Instrument Serif](https://github.com/Instrument/instrument-serif)

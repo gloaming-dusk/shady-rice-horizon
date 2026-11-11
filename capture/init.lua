@@ -3,7 +3,7 @@
 -- launcher and the control center) or the hero loop (hour changes timed to
 -- the website's chips, with a notification and the control center).
 local root = assert(os.getenv("SHADY_ROOT"))
-dofile(root .. "/rices/horizon/init.lua")
+dofile(assert(os.getenv("HORIZON_DIR")) .. "/init.lua")
 
 local mode = assert(os.getenv("CAPTURE_MODE"))
 local out = assert(os.getenv("CAPTURE_OUT"))

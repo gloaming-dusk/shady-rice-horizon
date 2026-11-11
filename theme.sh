@@ -1,0 +1,9 @@
+# Afterglow's palette for shady-shell (Horizon lives in its sky), until the
+# sky plugin publishes the live one. Sourced by shady-session and run.sh.
+export SHADY_SHELL_ACCENT="${SHADY_SHELL_ACCENT:-#FFB070}"
+export SHADY_SHELL_ACCENT_2="${SHADY_SHELL_ACCENT_2:-#FF6F91}"
+export SHADY_SHELL_ACCENT_DEEP="${SHADY_SHELL_ACCENT_DEEP:-#5A2E3C}"
+export SHADY_SHELL_SURFACE="${SHADY_SHELL_SURFACE:-#140F1C}"
+export SHADY_SHELL_TEXT="${SHADY_SHELL_TEXT:-#FFF1E6}"
+export SHADY_SHELL_TEXT_DIM="${SHADY_SHELL_TEXT_DIM:-#B9A2A8}"
+export SHADY_SHELL_DANGER="${SHADY_SHELL_DANGER:-#FF6B7A}"

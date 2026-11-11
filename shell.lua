@@ -7,10 +7,11 @@
 -- stars: type a name and the matching stars light up and join into a
 -- constellation. Colours follow the sky through its four hours (Super+T).
 
-shell.fonts(shell.data_dir .. "/../rices/tide/fonts")
+local HERE = (debug.getinfo(1, "S").source:match("^@(.*)/[^/]*$")) or "."
+shell.fonts(HERE .. "/fonts")
 
 -- The sky's horizon, as a fraction of the screen height from the top, for
--- Afterglow's camera (rices/afterglow/init.lua).
+-- Afterglow's camera (its init.lua).
 local HORIZON = 0.575
 
 local SERIF, SERIF_ITALIC, SANS = "Instrument Serif", "Instrument Serif Italic", "Manrope"

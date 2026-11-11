@@ -1,8 +1,7 @@
 -- Horizon runtime layer: Afterglow's sky, sea and bindings, plus glass and
 -- a 3D lean for the control center.
 
-local root = assert(os.getenv("SHADY_ROOT"))
-dofile(root .. "/rices/afterglow/init.lua")
+shady.base("afterglow")
 
 if shady.has_capability("spatial") then
     -- A slab of frosted glass standing in the sky, turned towards the
